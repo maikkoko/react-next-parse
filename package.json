@@ -1,0 +1,38 @@
+{
+  "name": "react-next-parse",
+  "version": "1.0.0",
+  "description": "Full-stack with react, nextjs, express, and parse-server",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development nodemon -w server devServer.js",
+    "build": "npm run build:next && npm run build:server",
+    "build:next": "cross-env NODE_ENV=production next build",
+    "build:server": "cross-env NODE_ENV=production babel -s -D -d .server server",
+    "start": "cross-env NODE_ENV=production node .server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Maikko Aleman <maikko.aleman@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "babel-register": "^6.26.0",
+    "child_process": "^1.0.2",
+    "cross-env": "^5.1.4",
+    "express": "^4.16.3",
+    "fs": "^0.0.1-security",
+    "next": "^6.0.0",
+    "parse": "^1.11.1",
+    "parse-server": "^2.7.4",
+    "prop-types": "^15.6.1",
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.2.3",
+    "babel-preset-env": "^1.6.1",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-import": "^2.11.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.7.0",
+    "nodemon": "^1.17.3"
+  }
+}
